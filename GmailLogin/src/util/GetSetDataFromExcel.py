@@ -3,7 +3,7 @@ from os import path
 from openpyxl import load_workbook
 
 
-class TestResult():
+class GetSetDataFromExcel():
 
     def writingTestResult(self,cell, status):
         fileDir = path.abspath(path.join(__file__, "../../../resources/GmailLoginTestCase.xlsx"))

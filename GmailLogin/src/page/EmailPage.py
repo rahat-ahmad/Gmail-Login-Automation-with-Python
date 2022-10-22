@@ -11,3 +11,11 @@ class EmailPage():
 
     def nextButtonClick(self,driver):
         WebDriverWait(driver, 15).until(expected_conditions.element_to_be_clickable((By.XPATH, "//div[@id='identifierNext']/div/button"))).click()
+
+    def getErrorMessage(self,driver):
+        print(WebDriverWait(driver, 15).until(expected_conditions.visibility_of_element_located((By.XPATH, "//div[@class='o6cuMc']"))).text)
+        return WebDriverWait(driver, 15).until(expected_conditions.visibility_of_element_located((By.XPATH, "//div[@class='o6cuMc']"))).text
+
+    def validEmailSigninCheck(self,driver):
+        print(WebDriverWait(driver, 15).until(expected_conditions.visibility_of_element_located((By.XPATH, "//h1[@id='headingText']/span"))).text)
+        return WebDriverWait(driver, 15).until(expected_conditions.visibility_of_element_located((By.XPATH, "//h1[@id='headingText']/span"))).text
